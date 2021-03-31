@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bai 3</title>
+  <title>Bai 4</title>
 </head>
 <body>
-  <canvas></canvas>
+  <canvas id="main"></canvas>
 
   <script>
     class Circle {
       constructor (x, y, radius, color) {
         this.x = x;
         this.y = y;
-        this.radius = raidus;
+        this.radius = radius;
         this.color = color;
       }
 
       render(canvas) {
-
+        const ctx = canvas.getContext("2d");
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
@@ -27,10 +27,11 @@
         ctx.closePath();
       }
     }
-    
-    const canvas = 
+
+    const canvas = document.getElementById('main');
     const circle = new Circle(10, 10, 100, '#000000');
     
+    circle.render(canvas);
   </script>
 </body>
 </html>
