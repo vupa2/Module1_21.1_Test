@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bai 3</title>
+</head>
+<body>
+  
+  <script>
+    const num1 = 9, num2 = 21, num3 = 34;
+
+    function isSquare(num) {
+      return num > 0 && Math.sqrt(num) % 1 === 0;
+    }
+
+    function isFibonacci(num) {
+      return isSquare(5 * Math.pow(num, 2) + 4) || isSquare(5 * Math.pow(num, 2) - 4);
+    }
+
+    console.log(isFibonacci(num1));
+    console.log(isFibonacci(num2));
+    console.log(isFibonacci(num3));
+  </script>
+</body>
+</html>
